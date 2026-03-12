@@ -1,0 +1,13 @@
+digraph DecisionTree {
+    node [shape=box, style="filled, rounded", color="black", fontname="helvetica"];
+    edge [fontname="helvetica"];
+    root [label="X_0 <= 0.500", fillcolor="#e5e5e5"];
+    rootL [label="Class: 0", fillcolor="#e5813999", shape=ellipse];
+    rootR [label="X_5 <= -0.500", fillcolor="#e5e5e5"];
+    rootRL [label="Class: 1", fillcolor="#399de599", shape=ellipse];
+    rootRR [label="Class: 0", fillcolor="#e5813999", shape=ellipse];
+    rootR -> rootRL [labeldistance=2.5, labelangle=45, headlabel="True"];
+    rootR -> rootRR [labeldistance=2.5, labelangle=-45, headlabel="False"];
+    root -> rootL [labeldistance=2.5, labelangle=45, headlabel="True"];
+    root -> rootR [labeldistance=2.5, labelangle=-45, headlabel="False"];
+}
